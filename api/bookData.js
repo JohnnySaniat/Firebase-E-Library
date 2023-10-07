@@ -21,7 +21,7 @@ const deleteBook = (firebaseKey) => new Promise((resolve, reject) => {
     method: 'DELETE',
     headers: {
       'Content-Type': 'application/json',
-    }, 
+    },
   })
     .then((response) => response.json())
     .then((data) => resolve((data)))
