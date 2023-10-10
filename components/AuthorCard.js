@@ -5,6 +5,7 @@ import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import Link from 'next/link';
 import { deleteSingleAuthor } from '../api/authorData';
+import heart from '../public/heart.png';
 
 function AuthorCard({ authorObj, onUpdate }) {
   // FOR DELETE, WE NEED TO REMOVE THE AUTHOR AND HAVE THE VIEW RERENDER,
@@ -23,7 +24,7 @@ function AuthorCard({ authorObj, onUpdate }) {
         <h6>Email: {authorObj.email}</h6>
         <p className="card-text bold">{authorObj.favorite && (
         <span>
-          <img alt="heart" src="./heart.png" />
+          <img alt="heart" src={heart.src} />
         </span>
         )} {authorObj.favorite}
         </p>
